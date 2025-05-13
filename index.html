@@ -17,18 +17,24 @@
 
 </head>
 <script>
-    const image = document.getElementById('playImage');
-    const audio = document.getElementById('myAudio');
-
-    image.addEventListener('click', function() {
-        if (audio.paused) {
-            console.log('Audio is paused, playing now');
-            audio.play();
+    window.onload = function() {
+        const image = document.getElementById('playImage');
+        const audio = document.getElementById('myAudio');
+        
+        if (image && audio) {
+            image.addEventListener('click', function() {
+                if (audio.paused) {
+                    console.log('Audio is paused, playing now');
+                    audio.play();
+                } else {
+                    console.log('Audio is playing, pausing now');
+                    audio.pause();
+                }
+            });
         } else {
-            console.log('Audio is playing, pausing now');
-            audio.pause();
+            console.log('Image or audio element not found');
         }
-    });
+    };
 </script>
 <body>
     </section>

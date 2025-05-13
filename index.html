@@ -16,6 +16,18 @@
     </style>
 
 </head>
+<script>
+    const image = document.getElementById('playImage');
+    const audio = document.getElementById('myAudio');
+
+   image.addEventListener('click', function() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+    </script>
 <body>
     </section>
     <div class="menu-container">
@@ -55,18 +67,7 @@
     your browser does not support the audio element.
     </audio>
       <!-- JavaScript -->
-  <script>
-    const image = document.getElementById('playImage');
-    const audio = document.getElementById('myAudio');
-
-   image.addEventListener('click', function() {
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
-    });
-    </script>
+  
   </div>
 
     </div>

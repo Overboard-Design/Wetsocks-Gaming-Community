@@ -29,81 +29,74 @@
         <h3>Socks Live Streams</h3>
     </div>
     
-    <div class="title">
-    <h2>SubZer0</h2>
-    </div>
-   
-    <div class="content">
-         <iframe
-    src="https://player.twitch.tv/?channel=subzer02023&parent=http://www.wetsocksgaming.com"
-    height="480"
-    width="854"
-    allowfullscreen>
-  </iframe>
+  <!-- Twitch Embed JS API -->
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
 
-  <!-- Twitch Chat Embed -->
-  <iframe
-    src="https://www.twitch.tv/embed/subzer02023/chat?parent=http://www.wetsocksgaming.com"
-    height="480"
-    width="350">
-  </iframe>
+<!-- SubZer0 -->
+<div class="title">
+  <h2>SubZer0</h2>
+</div>
+<div class="content">
+  <div id="player-subzer0"></div>
+</div>
 
-      <div class="title">
-    <h2>twrh_timmah</h2>
-    </div>
-   
-    <div class="content">
-         <iframe
-    src="https://player.twitch.tv/?channel=twrh_timmah&parent=http://www.wetsocksgaming.com"
-    height="480"
-    width="854"
-    allowfullscreen>
-  </iframe>
+<!-- twrh_timmah -->
+<div class="title">
+  <h2>twrh_timmah</h2>
+</div>
+<div class="content">
+  <div id="player-timmah"></div>
+</div>
 
-  <!-- Twitch Chat Embed -->
-  <iframe
-    src="https://www.twitch.tv/embed/twrh_timmah/chat?parent=http://www.wetsocksgaming.com"
-    height="480"
-    width="350">
-  </iframe>
-    
-  <div class="title">
-    <h2>Fiyahose</h2>
-    </div>
-   
-    <div class="content">
-         <iframe
-    src="https://player.twitch.tv/?channel=&parent=http://www.wetsocksgaming.com"
-    height="480"
-    width="854"
-    allowfullscreen>
-  </iframe>
+<!-- Fiyahose -->
+<div class="title">
+  <h2>Fiyahose</h2>
+</div>
+<div class="content">
+  <div id="player-fiyahose"></div>
+</div>
 
-  <!-- Twitch Chat Embed -->
-  <iframe
-    src="https://www.twitch.tv/embed/fiyahose/chat?parent=http://www.wetsocksgaming.com"
-    height="480"
-    width="350">
-  </iframe>
-  
-   <div class="title">
-    <h2>emberslodge</h2>
-    </div>
-   
-    <div class="content">
-         <iframe
-    src="https://player.twitch.tv/?channel=emberslodge&parent=http://www.wetsocksgaming.com"
-    height="480"
-    width="854"
-    allowfullscreen>
-  </iframe>
+<!-- emberslodge -->
+<div class="title">
+  <h2>emberslodge</h2>
+</div>
+<div class="content">
+  <div id="player-emberslodge"></div>
+</div>
 
-  <!-- Twitch Chat Embed -->
-  <iframe
-    src="https://www.twitch.tv/embed/emberslodge/chat?parent=http://www.wetsocksgaming.com"
-    height="480"
-    width="350">
-  </iframe>
+<!-- JavaScript to Load Players -->
+<script type="text/javascript">
+  const parentDomain = "www.wetsocksgaming.com";
+
+  new Twitch.Player("player-subzer0", {
+    width: 854,
+    height: 480,
+    channel: "subzer02023",
+    parent: [parentDomain]
+  });
+
+  new Twitch.Player("player-timmah", {
+    width: 854,
+    height: 480,
+    channel: "twrh_timmah",
+    parent: [parentDomain]
+  });
+
+  new Twitch.Player("player-fiyahose", {
+    width: 854,
+    height: 480,
+    channel: "fiyahose",
+    parent: [parentDomain]
+  });
+
+  new Twitch.Player("player-emberslodge", {
+    width: 854,
+    height: 480,
+    channel: "emberslodge",
+    parent: [parentDomain]
+  });
+</script>
+
 
 
    <div class="menu-container">

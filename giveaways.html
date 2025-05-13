@@ -33,21 +33,23 @@
    
     <div class="content">
 
-        <!-- Twitch Player Embed -->
-        <iframe
-            src="https://player.twitch.tv/?channel=subzer02023&https://www.wetsocksgaming.com"
-            height="480"
-            width="854"
-            allowfullscreen>
-        </iframe>
+       <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 
-        <!-- Twitch Chat Embed -->
-        <iframe
-            src="https://www.twitch.tv/embed/subzer02023/chat?https://www.wetsocksgaming.com/"
-            height="480"
-            width="350">
-        </iframe>
+<!-- Player Div -->
+<div id="twitch-player"></div>
 
+<script type="text/javascript">
+  var options = {
+    width: 854,
+    height: 480,
+    channel: "subzer02023",
+    parent: ["www.wetsocksgaming.com"]
+  };
+
+  var player = new Twitch.Player("twitch-player", options);
+  player.setVolume(0.5);
+</script>
+        
         <div class="menu-container">
             <a href="index.html" class="menu-item">
                 <i class="fas fa-home"></i> Return to Homepage

@@ -20,6 +20,20 @@
         @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
     </style>
 </head>
+<script>
+    let index = 0;
+    const slides = document.getElementsByClassName("slide");
+
+    function showNextSlide() {
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        index = (index + 1) % slides.length;
+        slides[index].style.display = "block";
+    }
+
+    setInterval(showNextSlide, 5000); // Change every 5 seconds
+</script>
 <body>
 
 
@@ -54,22 +68,6 @@
     <img class="slide" src="foxholetanks.jpg" style="display: none;" alt="foxholetanks">
     <img class= "slide" src="foxholegunboat.jpg" style="display: none;" alt="foxholegunboat">
 </div>
-
-<!-- JavaScript (best placed before </body>) -->
-<script>
-    let index = 0;
-    const slides = document.getElementsByClassName("slide");
-
-    function showNextSlide() {
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        index = (index + 1) % slides.length;
-        slides[index].style.display = "block";
-    }
-
-    setInterval(showNextSlide, 5000); // Change every 5 seconds
-</script>
 
 <!-- Second paragraph now properly placed -->
 <div class="content">

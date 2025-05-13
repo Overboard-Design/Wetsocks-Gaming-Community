@@ -20,14 +20,16 @@
     const image = document.getElementById('playImage');
     const audio = document.getElementById('myAudio');
 
-   image.addEventListener('click', function() {
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
+    image.addEventListener('click', function() {
+        if (audio.paused) {
+            console.log('Audio is paused, playing now');
+            audio.play();
+        } else {
+            console.log('Audio is playing, pausing now');
+            audio.pause();
+        }
     });
-    </script>
+</script>
 <body>
     </section>
     <div class="menu-container">
@@ -61,11 +63,11 @@
       Whether you're into Naval Action, Warthunder, Total War, Holdfast, Foxhole, Helldivers or dozens of other titles, our community has a place for you.
       Whether you want to socialize or compete, it's entirely up to you—just bring your sense of humor (and maybe a backup keyboard).
     </p>
-    <img src="wetsocks5.jpg" alt="Wetsocks" id="playimage" style="width: 300px; height: auto; cursor:pointer;">
-    <audio id="myAudio">
+    <img src="wetsocks5.jpg" alt="Wetsocks" id="playImage" style="width: 300px; height: auto; cursor: pointer;">
+<audio id="myAudio">
     <source src="SOCKS Anthem (1).wav" type="audio/wav">
-    your browser does not support the audio element.
-    </audio>
+    Your browser does not support the audio element.
+</audio>
       <!-- JavaScript -->
   
   </div>

@@ -33,21 +33,50 @@
     </div>
    
     <div class="content">
+  <style>
+ 
+  #twitch-player {
+    width: 854px;
+    height: 480px;
+    margin: 0 auto;
+    display: block;
+  }
 
-       <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+  
+  @media (max-width: 768px) {
+    #twitch-player {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      margin: 0 auto;
+    }
 
-<!-- Player Div -->
-<div id="twitch-player"></div>
+    #twitch-player iframe {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+</style>
 
-<script type="text/javascript">
-  var options = {
-    width: 854,
-    height: 480,
-    channel: "subzer02023",
-    parent: ["www.wetsocksgaming.com"],
-    muted: true 
-  };
+  <!-- Twitch Embed Script -->
+  <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 
+  <!-- Player Div -->
+  <div id="twitch-player"></div>
+
+  <script type="text/javascript">
+    var options = {
+      width: "100%", // These are overridden by CSS
+      height: "100%",
+      channel: "subzer02023",
+      parent: ["www.wetsocksgaming.com"], // Make sure this matches the domain exactly
+      muted: true
+    };
+
+    var player = new Twitch.Player("twitch-player", options);
+    player.setVolume(0.5);
+  </script>
+</div>
   var player = new Twitch.Player("twitch-player", options);
   player.setVolume(0.5);
 </script>

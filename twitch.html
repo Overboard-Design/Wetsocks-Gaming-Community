@@ -33,12 +33,43 @@
   <!-- Twitch Embed JS API -->
 <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+<style>
+  /* Shared player styles */
+  .content {
+    text-align: center; /* Optional: center titles if you want */
+    margin-bottom: 40px;
+  }
+
+  .content .twitch-player {
+    width: 854px;
+    height: 480px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .content .twitch-player {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+    }
+
+    .content .twitch-player iframe {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+</style>
+
 <!-- SubZer0 -->
 <div class="title">
   <h2>SubZer0</h2>
 </div>
 <div class="content">
-  <div id="player-subzer0"></div>
+  <div id="player-subzer0" class="twitch-player"></div>
 </div>
 
 <!-- twrh_timmah -->
@@ -46,7 +77,7 @@
   <h2>twrh_timmah</h2>
 </div>
 <div class="content">
-  <div id="player-timmah"></div>
+  <div id="player-timmah" class="twitch-player"></div>
 </div>
 
 <!-- Fiyahose -->
@@ -54,7 +85,7 @@
   <h2>Fiyahose</h2>
 </div>
 <div class="content">
-  <div id="player-fiyahose"></div>
+  <div id="player-fiyahose" class="twitch-player"></div>
 </div>
 
 <!-- emberslodge -->
@@ -62,7 +93,7 @@
   <h2>emberslodge</h2>
 </div>
 <div class="content">
-  <div id="player-emberslodge"></div>
+  <div id="player-emberslodge" class="twitch-player"></div>
 </div>
 
 <!-- JavaScript to Load Players -->
@@ -70,38 +101,37 @@
   const parentDomain = "www.wetsocksgaming.com";
 
   new Twitch.Player("player-subzer0", {
-    width: 854,
-    height: 480,
+    width: "100%",
+    height: "100%",
     channel: "subzer02023",
     parent: [parentDomain],
     muted: true
   });
 
   new Twitch.Player("player-timmah", {
-    width: 854,
-    height: 480,
+    width: "100%",
+    height: "100%",
     channel: "twrh_timmah",
     parent: [parentDomain],
     muted: true
   });
 
   new Twitch.Player("player-fiyahose", {
-    width: 854,
-    height: 480,
+    width: "100%",
+    height: "100%",
     channel: "fiyahose",
     parent: [parentDomain],
-    muted:true
+    muted: true
   });
 
   new Twitch.Player("player-emberslodge", {
-    width: 854,
-    height: 480,
+    width: "100%",
+    height: "100%",
     channel: "emberslodge",
     parent: [parentDomain],
-    muted:true
+    muted: true
   });
 </script>
-
 
 
    <div class="menu-container">

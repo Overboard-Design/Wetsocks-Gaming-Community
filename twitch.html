@@ -34,7 +34,7 @@
 <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 
 <style>
-  /* Shared player styles */
+  
   .content {
     text-align: center; /* Optional: center titles if you want */
     margin-bottom: 40px;
@@ -70,20 +70,20 @@
   <div id="player-subzer0" class="twitch-player"></div>
 </div>
 
-<!-- twrh_timmah -->
-<div class="title">
-  <h2>twrh_timmah</h2>
-</div>
-<div class="content">
-  <div id="player-timmah" class="twitch-player"></div>
-</div>
-
 <!-- Fiyahose -->
 <div class="title">
   <h2>Fiyahose</h2>
 </div>
 <div class="content">
   <div id="player-fiyahose" class="twitch-player"></div>
+</div>
+
+<!-- theonyxstorm -->
+<div class="title">
+  <h2>theonyxstorm</h2>
+</div>
+<div class="content">
+  <div id="player-theonyxstorm" class="twitch-player"></div>
 </div>
 
 <!-- emberslodge -->
@@ -102,6 +102,14 @@
   <div id="player-kabbadon" class="twitch-player"></div>
 </div>
 
+<!-- twrh_timmah -->
+<div class="title">
+  <h2>twrh_timmah</h2>
+</div>
+<div class="content">
+  <div id="player-timmah" class="twitch-player"></div>
+</div>
+
 <!-- JavaScript to Load Players -->
 <script type="text/javascript">
   const parentDomain = "www.wetsocksgaming.com";
@@ -114,18 +122,18 @@
     muted: true
   });
 
-  new Twitch.Player("player-timmah", {
-    width: "100%",
-    height: "100%",
-    channel: "twrh_timmah",
-    parent: [parentDomain],
-    muted: true
-  });
-
   new Twitch.Player("player-fiyahose", {
     width: "100%",
     height: "100%",
     channel: "fiyahose",
+    parent: [parentDomain],
+    muted: true
+  });
+  
+  new Twitch.Player("player-onyxstorm", {
+    width: "100%",
+    height: "100%",
+    channel: "theonyxstorm",
     parent: [parentDomain],
     muted: true
   });
@@ -142,6 +150,14 @@
     width: "100%",
     height: "100%",
     channel: "kabbadon",
+    parent: [parentDomain],
+    muted: true
+  });
+
+  new Twitch.Player("player-timmah", {
+    width: "100%",
+    height: "100%",
+    channel: "twrh_timmah",
     parent: [parentDomain],
     muted: true
   });

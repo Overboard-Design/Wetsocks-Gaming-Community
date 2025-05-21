@@ -161,7 +161,7 @@ h3 {
   position: absolute;
   display: none;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .slideshow-container {
         width: 100%;        /* Full width on small screens */
         height: auto;       /* Let height adjust naturally */

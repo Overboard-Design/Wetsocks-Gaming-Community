@@ -79,6 +79,14 @@
   <div id="player-fiyahose" class="twitch-player"></div>
 </div>
 
+<!-- dacobra1990 -->
+<div class="title">
+  <h2>dacobra1990</h2>
+</div>
+<div class="content">
+  <div id="player-dacobra1990" class="twitch-player"></div>
+</div>
+
 <!-- emberslodge -->
 <div class="title">
   <h2>emberslodge</h2>
@@ -122,9 +130,16 @@
     parent: [parentDomain],
     muted: true
   });
-  
 
-  new Twitch.Player("player-emberslodge", {
+  new Twitch.Player("player-dacobra1990", {
+    width: "100%",
+    height: "100%",
+    channel: "dacobra1990",
+    parent: [parentDomain],
+    muted: true
+  });
+  
+    new Twitch.Player("player-emberslodge", {
     width: "100%",
     height: "100%",
     channel: "emberslodge",
